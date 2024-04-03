@@ -9,7 +9,7 @@ const port = 5724;
 var secret = process.env.DB_SECRET;
 app.use(json());
 
-var whitelist = ['http://localhost:3000', CORS_WHITELIST]
+var whitelist = ['http://localhost:3000', process.env.CORS_WHITELIST]
 var corsOptions = {
     origin: function (origin, callback) {
         if (whitelist.indexOf(origin) !== -1) {
